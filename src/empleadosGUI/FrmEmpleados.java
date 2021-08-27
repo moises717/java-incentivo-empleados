@@ -269,7 +269,7 @@ public class FrmEmpleados extends javax.swing.JFrame {
                     fila[5] = String.valueOf(totalPagar2);
 
                 } else {
-                    fila[5] = "No gano insentivo";
+                    fila[5] = "No gano incentivo";
                 }
 
                 modelo.addRow(fila);
