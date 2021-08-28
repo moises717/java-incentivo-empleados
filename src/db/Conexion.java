@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Conexion {
 
-    String strConn = "jdbc:sqlite:empleados.s3db";
+    String strConn = "jdbc:sqlite:C:\\Users\\Moises\\OneDrive\\Documentos\\db\\empleados.s3db";
     Connection conn = null;
 
     public Conexion() {
@@ -13,6 +13,7 @@ public class Conexion {
             Class.forName("org.sqlite.JDBC");
 
             conn = DriverManager.getConnection(strConn);
+            
 
             System.out.println("Conexion establecida.");
 

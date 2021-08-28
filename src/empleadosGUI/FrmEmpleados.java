@@ -7,7 +7,9 @@ package empleadosGUI;
 
 import db.Conexion;
 import empleados.Empleados;
+import java.awt.Toolkit;
 import java.sql.ResultSet;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import org.greenrobot.eventbus.Subscribe;
 
@@ -19,6 +21,11 @@ public class FrmEmpleados extends javax.swing.JFrame {
 
     public FrmEmpleados() {
         initComponents();
+        
+       
+        
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/recursos/titlebar.png")));
+        
         tblEmpleados.getTableHeader().setDefaultRenderer(new CustomHeaderTableSettings());
         tblEmpleados.setDefaultEditor(Object.class, null);
         
@@ -45,6 +52,7 @@ public class FrmEmpleados extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFocusCycleRoot(false);
         setFocusTraversalPolicyProvider(true);
+        setIconImages(null);
         setLocation(new java.awt.Point(50, 50));
         setResizable(false);
 
@@ -58,7 +66,6 @@ public class FrmEmpleados extends javax.swing.JFrame {
 
             }
         ));
-        tblEmpleados.setColumnSelectionAllowed(false);
         tblEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblEmpleadosMouseClicked(evt);
